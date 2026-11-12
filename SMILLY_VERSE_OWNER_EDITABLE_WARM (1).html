@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Smilly Verse gaming video editor. High-energy gaming montages, YouTube edits and Shorts crafted with Adobe Premiere Pro.">
+<meta name="theme-color" content="#0b0b0c">
+<title>SMILLY VERSE — Gaming Video Editor</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#0b0b0c;--panel:#171615;--cyan:#ff9a3d;--muted:#aaa39a;--white:#f5f1e9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,88%);margin:auto}
+header{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff1c;padding:0 6%;position:sticky;top:0;background:#0b0b0cee;backdrop-filter:blur(12px);z-index:5}.brand{font-weight:900;letter-spacing:1.5px;display:flex;align-items:center;gap:10px}.mark{background:var(--cyan);color:#061018;padding:9px 10px;font-family:'Barlow Condensed';font-size:20px}.cyan{color:var(--cyan)}nav{display:flex;gap:28px;align-items:center}nav a{font-size:10px;font-weight:800;letter-spacing:1.4px;color:#ded8ce}nav a:hover{color:var(--cyan)}.navbtn{border:1px solid var(--cyan);padding:12px 15px;color:var(--cyan)}.menu{display:none;background:none;border:0;color:white;font-size:26px}
+.hero{min-height:640px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:65px;padding-bottom:80px}.status{display:inline-block;border:1px solid #ffffff26;padding:9px 12px;font-size:9px;letter-spacing:2px;color:#eee7dc}.status i{display:inline-block;width:7px;height:7px;background:#ffb547;border-radius:50%;margin-right:8px;box-shadow:0 0 10px #ffb547}.eyebrow{font-size:10px;letter-spacing:2.5px;color:var(--muted);font-weight:800;margin-top:28px}.hero h1{font:900 clamp(66px,8vw,105px)/.83 'Barlow Condensed',Impact,sans-serif;margin:20px 0 25px;letter-spacing:-1px}.stroke{color:transparent;-webkit-text-stroke:1.5px white}.hero p{color:var(--muted);font-size:13px;line-height:1.9;max-width:470px}.actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.btn{display:inline-flex;gap:20px;align-items:center;padding:16px 19px;font-size:10px;font-weight:900;letter-spacing:1px}.primary{background:var(--cyan);color:#061018}.secondary{border:1px solid #ffffff40}.primary:hover{background:white}.secondary:hover{border-color:var(--cyan);color:var(--cyan)}.stats{display:flex;gap:22px;margin-top:38px;font-size:8px;letter-spacing:1px;color:#9b9288}.stats b{color:var(--cyan);margin-right:5px}
+.art{height:420px;background:linear-gradient(145deg,#28221d,#141312);border:1px solid #60452f;position:relative;display:grid;place-items:center;overflow:hidden;clip-path:polygon(0 0,91% 0,100% 10%,100% 100%,9% 100%,0 90%)}.art:before{content:"";position:absolute;inset:0;background:linear-gradient(#ff9a3d12 1px,transparent 1px),linear-gradient(90deg,#ff9a3d12 1px,transparent 1px);background-size:32px 32px;transform:perspective(400px) rotateX(10deg) scale(1.3)}.circle{position:absolute;width:290px;height:290px;border:1px solid #ff9a3d8c;border-radius:50%;box-shadow:0 0 45px #ff9a3d18,inset 0 0 35px #ff9a3d13}.circle:after{content:"";position:absolute;inset:35px;border:1px dashed #ff315880;border-radius:50%}.sv{position:relative;font:900 170px 'Barlow Condensed';letter-spacing:-18px;text-shadow:8px 8px #ff9a3d4d}.sv span{color:var(--cyan)}.art small{position:absolute;bottom:18px;left:20px;right:20px;display:flex;justify-content:space-between;color:#e7dfd2;font-size:8px;letter-spacing:2px}
+.ticker{overflow:hidden;white-space:nowrap;background:#171615;border-block:1px solid #ffffff1b;padding:15px 0;font:800 18px 'Barlow Condensed';letter-spacing:2px}.ticker span{color:var(--cyan);padding:0 22px}
+section.content{padding:100px 0}.section-kicker{font-size:10px;letter-spacing:2.5px;color:var(--muted);font-weight:800}.heading{font:900 clamp(48px,6vw,68px)/.9 'Barlow Condensed';margin:15px 0 35px}.workgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.tile{min-height:220px;position:relative;display:grid;place-items:center;overflow:hidden;border:1px solid #ffffff22}.tile:first-child{grid-row:span 2;min-height:460px;background:radial-gradient(circle at 60% 40%,#48231d,#191312 60%,#0c111a)}.tile:nth-child(2){background:radial-gradient(circle at 60% 40%,#3d2a20,#191512 65%)}.tile:nth-child(3){background:radial-gradient(circle at 60% 40%,#403020,#171411 65%)}.tile:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 23px,#ffffff0b 24px 25px)}.tile strong{font:900 60px/.8 'Barlow Condensed';font-style:italic;text-align:center;z-index:1}.tile small{position:absolute;bottom:15px;left:18px;font-size:8px;letter-spacing:2px;color:#e0e8f0}.tile .play{position:absolute;right:17px;top:17px;border:1px solid #ffffff80;border-radius:50%;padding:10px;color:var(--cyan);font-size:10px}.workcaption{padding:13px 0 22px}.workcaption b{font-size:14px}.workcaption p{font-size:10px;color:var(--muted);margin:6px 0}.note{font-size:9px;letter-spacing:1px;color:#9aa8b8;border-left:2px solid #ff3158;padding-left:12px;margin-top:15px}
+.services{background:#0e1521;border-block:1px solid #ffffff1c}.service{display:grid;grid-template-columns:55px 1fr 25px;gap:12px;align-items:center;padding:22px 8px;border-top:1px solid #ffffff1c}.service:last-child{border-bottom:1px solid #ffffff1c}.num{font-size:10px;color:var(--cyan);font-weight:800}.service h3{font-size:16px;margin:0 0 6px}.service p{font-size:10px;color:var(--muted);margin:0;line-height:1.6}.arrow{color:var(--cyan)}
+.aboutgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:9%;align-items:center}.badgebox{height:280px;background:linear-gradient(145deg,#142b40,#0d1420);border:1px solid #29465a;display:grid;place-items:center;position:relative;overflow:hidden}.badgebox:before{content:"";position:absolute;width:210px;height:210px;border:1px solid var(--cyan);transform:rotate(45deg)}.badgebox b{font:900 120px 'Barlow Condensed';color:var(--cyan);z-index:1}.abouttext{font-size:12px;line-height:2;color:var(--muted);max-width:600px}.software{display:inline-flex;gap:12px;align-items:center;border:1px solid #ffffff2a;padding:10px 14px;margin-top:15px}.pr{background:#e34c38;color:white;padding:9px;font-weight:900}.software b,.software small{display:block;font-size:9px;letter-spacing:1px;color:white}.software small{font-size:8px;color:var(--muted);margin-top:4px}
+.contact{background:linear-gradient(110deg,#0d1a29,#101b2a);border-block:1px solid #294052;text-align:center;padding:90px 0}.contact h2{font:900 clamp(60px,8vw,96px)/.85 'Barlow Condensed';margin:20px 0}.contact p{color:var(--muted);font-size:12px;line-height:1.9;max-width:470px;margin:20px auto 28px}.hint{font-size:9px!important;color:#8291a4!important;margin-top:14px!important}
+footer{padding:25px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;border-top:1px solid #ffffff1c}footer small{color:#8190a2;font-size:8px;letter-spacing:1px}
+@media(max-width:720px){header{height:65px}.menu{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;background:#0b111b;padding:22px 7%;flex-direction:column;align-items:stretch;border-bottom:1px solid #ffffff22}nav.open{display:flex}nav .navbtn{text-align:center}.hero{grid-template-columns:1fr;padding-top:55px;gap:35px}.hero h1{font-size:75px}.art{height:310px}.sv{font-size:135px}.stats{flex-wrap:wrap}.content{padding:72px 0!important}.workgrid{grid-template-columns:1fr}.tile:first-child{grid-row:auto;min-height:280px}.tile{min-height:210px}.aboutgrid{grid-template-columns:1fr;gap:30px}.badgebox{height:220px}.service{grid-template-columns:35px 1fr 20px}.contact{padding:72px 0}footer small{width:100%;order:3}}
+
+/* WARM EDITORIAL PALETTE: ivory + ink + amber/orange */
+:root{--bg:#0b0b0c;--panel:#171615;--cyan:#ff9a3d;--muted:#aaa39a;--white:#f5f1e9}
+body{background:var(--bg);color:var(--white)}
+header{background:#0b0b0cee}
+.brand .mark,.primary{background:#ffb547;color:#17100a}
+.cyan,.stats b,.ticker span{color:#ff9a3d}
+.stroke{-webkit-text-stroke-color:#f5f1e9}
+.navbtn{border-color:#ff9a3d;color:#ffb547}
+nav a:hover,.secondary:hover{color:#ffb547}
+.primary:hover{background:#f5f1e9;color:#17100a}
+.art{background:linear-gradient(145deg,#28221d,#141312);border-color:#60452f}
+.art:before{background:linear-gradient(#ff9a3d12 1px,transparent 1px),linear-gradient(90deg,#ff9a3d12 1px,transparent 1px)}
+.circle{border-color:#ff9a3d8c;box-shadow:0 0 45px #ff9a3d18,inset 0 0 35px #ff9a3d13}
+.circle:after{border-color:#ff654580}
+.sv{text-shadow:8px 8px #ff9a3d38}
+.ticker{background:#171615}
+.tile:first-child{background:radial-gradient(circle at 60% 40%,#48231d,#191312 60%,#0b0b0c)}
+.tile:nth-child(2){background:radial-gradient(circle at 60% 40%,#3d2a20,#191512 65%)}
+.tile:nth-child(3){background:radial-gradient(circle at 60% 40%,#403020,#171411 65%)}
+#sv-owner-tools button{border-color:#ffb547}
+#sv-owner-tools button.primary{background:#ffb547;color:#17100a}
+#sv-edit-status{color:#ffb547;border-color:#ffb547}
+#sv-editor-help .panel{border-color:#ffb547}
+#sv-editor-help h3{color:#ffb547}
+#sv-editor-help button{background:#ffb547;color:#17100a}
+body.sv-editing [data-sv-edit]{outline-color:#ffb547}
+
+</style>
+</head>
+<body>
+<header><a class="brand" href="#top"><span class="mark">SV</span> SMILLY<span class="cyan">VERSE</span></a><button class="menu" aria-label="Open menu">☰</button><nav><a href="#work">WORK</a><a href="#services">SERVICES</a><a href="#about">ABOUT</a><a class="navbtn" href="#contact">HIRE ME ↗</a></nav></header>
+<main id="top">
+<section class="hero wrap"><div><span class="status"><i></i> AVAILABLE FOR NEW PROJECTS</span><div class="eyebrow">GAMING VIDEO EDITOR / PREMIERE PRO</div><h1>YOUR GAMEPLAY.<br><span class="stroke">MY EDIT.</span><br>PURE <span class="cyan">HYPE.</span></h1><p>I turn raw gameplay into high-energy videos, scroll-stopping Shorts and cinematic moments your audience wants to watch again.</p><div class="actions"><a class="btn primary" href="#work">EXPLORE MY WORK ↘</a><a class="btn secondary" href="#contact">HIRE ME ↗</a></div><div class="stats"><span><b>01</b> CREATIVE STORYTELLING</span><span><b>02</b> FAST-PACED EDITS</span></div></div><div class="art"><div class="circle"></div><div class="sv">S<span>V</span></div><small><span>SMILLY VERSE</span><span>EDIT. IMPACT. REPEAT.</span></small></div></section>
+<div class="ticker">GAMING MONTAGES <span>✦</span> YOUTUBE VIDEOS <span>✦</span> SHORT-FORM CONTENT <span>✦</span> SOUND DESIGN <span>✦</span> GAMING MONTAGES <span>✦</span></div>
+<section class="content wrap" id="work"><div class="section-kicker">SELECTED PROJECTS</div><h2 class="heading">THE <span class="cyan">SHOWREEL.</span></h2><div class="workgrid"><div><a class="tile" href="#contact"><span class="play">▶</span><strong>CLUTCH<br>MODE</strong><small>01 / GAMING MONTAGE</small></a><div class="workcaption"><b>Gaming Montage</b><p>Fast cuts · Beat sync · Impact moments</p></div></div><div><a class="tile" href="#contact"><span class="play">▶</span><strong>ONE MORE<br>ROUND.</strong><small>02 / GAMING SHORTS</small></a><div class="workcaption"><b>Gaming Shorts</b><p>Hooks · Captions · Retention</p></div><a class="tile" href="#contact"><span class="play">▶</span><strong>CINEMATIC<br>PLAY.</strong><small>03 / CINEMATIC EDIT</small></a><div class="workcaption"><b>Cinematic Edit</b><p>Atmosphere · Sound design · Color</p></div></div></div><div class="note">DEMO SHOWCASE — Replace these visual samples with your real video links before sending to clients.</div></section>
+<section class="services"><div class="wrap content" id="services"><div class="section-kicker">WHAT I CAN DO FOR YOU</div><h2 class="heading">CONTENT THAT<br><span class="cyan">HITS DIFFERENT.</span></h2><div class="service"><span class="num">01</span><div><h3>YouTube Gaming Videos</h3><p>Engaging pacing, clean storytelling and polished long-form edits.</p></div><span class="arrow">↗</span></div><div class="service"><span class="num">02</span><div><h3>Gaming Shorts & Reels</h3><p>Strong hooks, punchy cuts, captions and vertical-ready delivery.</p></div><span class="arrow">↗</span></div><div class="service"><span class="num">03</span><div><h3>Montages & Highlights</h3><p>Beat-synced action, satisfying transitions and memorable plays.</p></div><span class="arrow">↗</span></div><div class="service"><span class="num">04</span><div><h3>Sound & Visual Polish</h3><p>Sound effects, music timing, color correction and motion accents.</p></div><span class="arrow">↗</span></div></div></section>
+<section class="content wrap aboutgrid" id="about"><div class="badgebox"><b>SV</b></div><div><div class="section-kicker">A LITTLE ABOUT ME</div><h2 class="heading">HEY, I'M<br><span class="cyan">SMILLY VERSE.</span></h2><p class="abouttext">I'm a gaming video editor focused on making content feel exciting, polished and easy to keep watching. I edit with Adobe Premiere Pro and bring together pacing, music, sound effects and storytelling to give every clip its own energy.</p><div class="software"><span class="pr">Pr</span><span><b>ADOBE PREMIERE PRO</b><small>MY EDITING TOOLKIT</small></span></div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="section-kicker">GOT GAMEPLAY?</div><h2>LET'S MAKE<br>IT <span class="cyan">UNMISSABLE.</span></h2><p>Have a video idea, a channel to grow, or raw clips ready to go? Send me a message and let's talk about your next edit.</p><a class="btn primary" href="https://discord.com/users/YOUR_DISCORD_ID" target="_blank" rel="noopener">CONTACT ME ON DISCORD ↗</a><p class="hint">Before publishing: replace YOUR_DISCORD_ID in this button with your Discord user ID, or use your Discord server invite link.</p></div></section>
+</main>
+<footer><a class="brand" href="#top"><span class="mark">SV</span> SMILLY<span class="cyan">VERSE</span></a><small>© <span id="year"></span> SMILLY VERSE. ALL RIGHTS RESERVED.</small><small>BUILT FOR BIG PLAYS.</small></footer>
+<script>
+const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+<style>
+/* SMILLY VERSE OWNER EDITOR */
+#sv-owner-tools{position:fixed;right:18px;bottom:18px;z-index:99999;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100vw - 36px)}
+#sv-owner-tools button{border:1px solid #ffb547;background:#07131d;color:#eafaff;padding:11px 14px;border-radius:8px;font:700 11px Arial;letter-spacing:1px;cursor:pointer;box-shadow:0 5px 22px #0009}
+#sv-owner-tools button.primary{background:#ffb547;color:#001018}
+#sv-edit-status{position:fixed;left:18px;bottom:18px;z-index:99998;background:#07131d;color:#ffb547;border:1px solid #ffb547;padding:10px 13px;border-radius:8px;font:700 11px Arial;display:none}
+body.sv-editing [data-sv-edit]{outline:1px dashed #ffb547;outline-offset:4px;cursor:text}
+#sv-editor-help{position:fixed;inset:0;background:#000b;z-index:100000;display:none;align-items:center;justify-content:center;padding:18px}
+#sv-editor-help .panel{background:#08121d;border:1px solid #ffb547;color:#eefaff;max-width:470px;padding:24px;border-radius:14px;font:14px/1.6 Arial}
+#sv-editor-help h3{color:#ffb547;margin-top:0}
+#sv-editor-help button{background:#ffb547;border:0;padding:9px 15px;border-radius:6px;font-weight:bold;cursor:pointer}
+@media(max-width:600px){#sv-owner-tools{left:10px;right:10px;bottom:10px}#sv-owner-tools button{flex:1;padding:10px 6px;font-size:9px}#sv-edit-status{left:10px;bottom:66px}}
+</style>
+<div id="sv-owner-tools" aria-label="Owner editing tools">
+  <button id="sv-login">OWNER LOGIN</button>
+  <button id="sv-save" class="primary" style="display:none">SAVE CHANGES</button>
+  <button id="sv-export" style="display:none">DOWNLOAD UPDATED HTML</button>
+  <button id="sv-exit" style="display:none">EXIT EDIT</button>
+</div>
+<div id="sv-edit-status">OWNER EDIT MODE — click text to edit</div>
+<div id="sv-editor-help">
+ <div class="panel">
+  <h3>SMILLY VERSE — OWNER EDITOR</h3>
+  <p>Click any highlighted text on the page and type your changes. Press <b>SAVE CHANGES</b> to keep them in this browser, or <b>DOWNLOAD UPDATED HTML</b> to create a new file containing your edits.</p>
+  <p><b>Important:</b> This PIN is only a simple local editing lock, not secure website authentication. For the published website, keep editing access through your private GitHub account/repository. Never publish a real password in HTML.</p>
+  <button id="sv-help-close">GOT IT</button>
+ </div>
+</div>
+<script>
+(() => {
+  const OWNER_PIN = "2468"; // Change this PIN for your local copy. Do not treat it as online security.
+  const editableSelector = "h1,h2,h3,p,.eyebrow,.section-kicker,.status,.ticker,.service,.workcaption,.stats,.software,.note,.brand,footer small,.contact .hint";
+  const key = "smillyVersePortfolioEditsV1";
+  const login = document.getElementById("sv-login");
+  const save = document.getElementById("sv-save");
+  const exportBtn = document.getElementById("sv-export");
+  const exit = document.getElementById("sv-exit");
+  const status = document.getElementById("sv-edit-status");
+  let editing = false;
+
+  function markEditable() {
+    document.querySelectorAll(editableSelector).forEach((el, i) => {
+      if (el.closest("#sv-owner-tools,#sv-editor-help")) return;
+      el.dataset.svEdit = String(i);
+    });
+  }
+  function restore() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(key) || "{}");
+      Object.entries(saved).forEach(([id, value]) => {
+        const el = document.querySelector('[data-sv-edit="' + CSS.escape(id) + '"]');
+        if (el) el.innerHTML = value;
+      });
+    } catch(e) {}
+  }
+  function setEditing(on) {
+    editing = on;
+    document.body.classList.toggle("sv-editing", on);
+    document.querySelectorAll("[data-sv-edit]").forEach(el => el.contentEditable = on ? "true" : "false");
+    save.style.display = exportBtn.style.display = exit.style.display = on ? "inline-block" : "none";
+    login.style.display = on ? "none" : "inline-block";
+    status.style.display = on ? "block" : "none";
+    if (on) document.getElementById("sv-editor-help").style.display = "flex";
+  }
+  function collect() {
+    const data = {};
+    document.querySelectorAll("[data-sv-edit]").forEach(el => data[el.dataset.svEdit] = el.innerHTML);
+    return data;
+  }
+  markEditable();
+  restore();
+
+  login.addEventListener("click", () => {
+    const pin = prompt("Enter your owner PIN:");
+    if (pin === OWNER_PIN) setEditing(true);
+    else if (pin !== null) alert("Incorrect PIN.");
+  });
+  document.getElementById("sv-help-close").addEventListener("click", () => {
+    document.getElementById("sv-editor-help").style.display = "none";
+  });
+  save.addEventListener("click", () => {
+    localStorage.setItem(key, JSON.stringify(collect()));
+    alert("Saved in this browser. Download the updated HTML if you want a portable updated file.");
+  });
+  exportBtn.addEventListener("click", () => {
+    const clone = document.documentElement.cloneNode(true);
+    const data = collect();
+    clone.querySelectorAll("[data-sv-edit]").forEach(el => {
+      const value = data[el.dataset.svEdit];
+      if (value !== undefined) el.innerHTML = value;
+      el.removeAttribute("contenteditable");
+    });
+    clone.querySelector("body").classList.remove("sv-editing");
+    const blob = new Blob(["<!DOCTYPE html>\n" + clone.outerHTML], {type:"text/html;charset=utf-8"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "SMILLY_VERSE_PORTFOLIO_UPDATED.html";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+  exit.addEventListener("click", () => setEditing(false));
+})();
+</script>
+
+</body></html>
